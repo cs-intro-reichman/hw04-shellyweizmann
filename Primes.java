@@ -35,7 +35,7 @@ public class Primes {
         for (i = 0; i < myArray.length; i++) {
 
             if (myArray[i]) { // = true
-                System.out.println(i + " ");
+                System.out.println(i);
                 counter++;
             }
         }
