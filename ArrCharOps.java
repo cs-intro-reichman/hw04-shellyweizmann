@@ -121,7 +121,8 @@ public class ArrCharOps {
        // println(arr);
        // System.out.println("char: " + ch);
       //  System.out.println("from index: " + fromIndex);
-        int i;
+        //OLD CODE - START
+        /*int i;
         for (i=fromIndex; i < arr.length; i++ ){
             if(arr[i] == ch){
                 return i;
@@ -133,8 +134,30 @@ public class ArrCharOps {
             }
         }
         
-        return -1;
+        return -1; */
+        //OLD CODE - END
+        int i;
+        int firstIndex=-1;
+
+        for (i=fromIndex; i < arr.length; i++ ){
+            if(arr[i] == ch){
+                if (firstIndex==-1 || i<firstIndex){
+                    firstIndex=i;
+                }
+                //return i;
+            }
+        }    
+        for (i=0; i<fromIndex; i++) {
+            if(arr[i] == ch){
+                if (firstIndex==-1 || i<firstIndex){
+                    firstIndex=i;
+                }
+            } 
+        }    
+        return firstIndex;   
     }
+
+
 
     /** Returns the index within the given arr of the last occurrence of the given character.
      *  If no such character is found, returns -1.
