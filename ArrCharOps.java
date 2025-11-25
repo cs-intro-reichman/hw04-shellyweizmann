@@ -179,10 +179,10 @@ public class ArrCharOps {
      */     
     public static char[] subArray(char[] arr, int beginIndex, int endIndex) {
         //System.out.println("in function subArray");
-        char[] result = new char[arr.length - 1 - beginIndex];
+        char[] result = new char[endIndex - beginIndex];
         int i;
         int j=0;
-        for(i=beginIndex; i<=endIndex-1; i++){
+        for(i=beginIndex; i < endIndex; i++){
             result[j] = arr[i];
             j++;
         }
