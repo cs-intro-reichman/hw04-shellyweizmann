@@ -122,7 +122,13 @@ public class ArrCharOps {
        // System.out.println("char: " + ch);
       //  System.out.println("from index: " + fromIndex);
         //OLD CODE - START
-        /*int i;
+        int i;
+
+        
+        if (fromIndex < 0 || fromIndex >= arr.length) {
+                    return -1;
+        }
+
         for (i=fromIndex; i < arr.length; i++ ){
             if(arr[i] == ch){
                 return i;
@@ -134,9 +140,12 @@ public class ArrCharOps {
             }
         }
         
-        return -1; */
+        return -1; 
+    }
         //OLD CODE - END
-        int i;
+        
+        //NEW CODE - START 
+        /*int i;
         int firstIndex=-1;
 
         if (fromIndex < 0 || fromIndex >= arr.length) {
@@ -159,7 +168,8 @@ public class ArrCharOps {
             } 
         }    
         return firstIndex;   
-    }
+    } */
+
 
 
 
