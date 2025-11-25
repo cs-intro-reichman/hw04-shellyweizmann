@@ -139,6 +139,10 @@ public class ArrCharOps {
         int i;
         int firstIndex=-1;
 
+        if (fromIndex < 0 || fromIndex >= arr.length) {
+            return -1;
+         }
+
         for (i=fromIndex; i < arr.length; i++ ){
             if(arr[i] == ch){
                 if (firstIndex==-1 || i<firstIndex){
