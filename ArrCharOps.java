@@ -239,6 +239,10 @@ public class ArrCharOps {
         //System.out.println("functionofcompareto");  
         int i;
         int length; 
+
+        if(str1.isEmpty() || str2.isEmpty()){
+            return -2;
+        }
   
         if(str1.length()<=str2.length()){
             length = str1.length();
