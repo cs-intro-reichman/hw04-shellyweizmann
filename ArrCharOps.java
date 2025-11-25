@@ -122,7 +122,7 @@ public class ArrCharOps {
        // System.out.println("char: " + ch);
       //  System.out.println("from index: " + fromIndex);
         //OLD CODE - START
-        int i;
+       /* int i;
 
         
         if (fromIndex < 0 || fromIndex >= arr.length) {
@@ -169,6 +169,27 @@ public class ArrCharOps {
         }    
         return firstIndex;   
     } */
+
+    if (fromIndex < 0 || fromIndex >= arr.length) {
+        return -1;
+    }
+
+    // First search forward
+    for (int i = fromIndex; i < arr.length; i++) {
+        if (arr[i] == ch) {
+            return i;
+        }
+    }
+
+    // Then wrap and search from the beginning
+    for (int i = 0; i < fromIndex; i++) {
+        if (arr[i] == ch) {
+            return i;
+        }
+    }
+
+    return -1;
+}
 
 
 
