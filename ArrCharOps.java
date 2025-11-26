@@ -117,6 +117,16 @@ public class ArrCharOps {
     /** Same as indexOf(char[], char), but starts the search in the given index.
      */
     public static int indexOf(char[] arr, char ch, int fromIndex) {
+    int i;
+        for(i=fromIndex; i<arr.length; i++){
+            if (arr[i] == ch){
+                return i;
+            }
+
+        }
+        return -1;
+    }
+
         //System.out.println("in function idexof");
        // println(arr);
        // System.out.println("char: " + ch);
@@ -170,7 +180,7 @@ public class ArrCharOps {
         return firstIndex;   
     } */
 
-    if (fromIndex < 0 || fromIndex >= arr.length) {
+    /*if (fromIndex < 0 || fromIndex >= arr.length) {
         return -1;
     }
 
@@ -189,7 +199,7 @@ public class ArrCharOps {
     }
 
     return -1;
-}
+}*/
 
 
 
